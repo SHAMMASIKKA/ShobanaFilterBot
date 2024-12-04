@@ -16,13 +16,13 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '27326387'))
 API_HASH = environ.get('API_HASH', 'bde5a81c08ee3341ee953b714d297534')
-BOT_TOKEN = environ.get('BOT_TOKEN', '8169004575:AAHKjuaYfheQzQ5HGbc8ZYDmEcowAZvfC24')
+BOT_TOKEN = environ.get('BOT_TOKEN', '8175409125:AAEruwH3WDzxZmHJnTFnSHAXUXhNoH3bmHg')
 
 # Bot settings
 BOT_START_TIME = time()
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', '')).split()
+PICS = (environ.get('PICS', 'https://graph.org/file/3c3304870ebb2e49078cb-dd0574c059246e2ba7.jpg')).split()
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6639622980').split()]
@@ -41,7 +41,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'mn_files')
 
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002458847855'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'CinemaKandaloLinks')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', 'False')), False)
 IMDB = is_enabled((environ.get('IMDB', 'False')), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', 'True')), True)
